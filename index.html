@@ -14,22 +14,30 @@
     <body>
         <div id="app">
 
-         <div >
-            <form @submit.prevent="createItem">
-                <input type="text" v-model="item" >
-                <button type="submit" >invia</button>
-            </form>
-            <div>
-                <ul >
-                    <li v-for="(element, index) in listItem"  >
-                        <p 
-                            @click="invertDone(element)" :class="{line : element.done === true } ">
-                            {{element.text}}
-                        </p>
-                        <i class="fa-solid fa-xmark" @click="spliceItem(index)"></i>
-                    </li>
-                </ul>
+         <div  class="container">
+            <div class="box">
+                <div>
+                     <img src="img/logo (1).png" alt="">
+                </div>
+                <div class="form-list">
+                    <form @submit.prevent="createItem">
+                        <input type="text" v-model="item" >
+                        <button type="submit" >invia</button>
+                    </form>
+                </div>
+                <div class="list">
+                    <ul >
+                        <li v-for="(element, index) in listItem"  >
+                            <p 
+                                @click="invertDone(element)" :class="{line : element.done === true } ">
+                                {{element.text}}
+                            </p>
+                            <i class="fa-solid fa-xmark" @click="spliceItem(index)"></i>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        
          </div>
 
         </div>
