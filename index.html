@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-list">
                     <form @submit.prevent="createItem">
-                        <input type="text" v-model="item" >
+                        <input type="text" v-model="item" minlength="5" required>
                         <button type="submit" >invia</button>
                     </form>
                 </div>

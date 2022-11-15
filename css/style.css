@@ -41,16 +41,17 @@ img{
 }
 ul{
     width: 400px;
-    border: 2px solid brown;
+    border: 4px solid brown;
     border-radius: 30px;
     background-color: bisque;
 }
 ul li{
     list-style: none;
-    width: 400px;
+    width: 396px;
     height: 30px;
     font-size: 20px;
     font-weight: bold;
+    border-bottom: 1px solid rgb(216, 116, 66);
 }
 p{
     padding: 0px 30px;
