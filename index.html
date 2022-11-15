@@ -21,12 +21,15 @@
                 </div>
                 <div class="form-list">
                     <form @submit.prevent="createItem">
-                        <input type="text" v-model="item" minlength="5" required>
+                        <input type="text" v-model="item" minlength="5" required placeholder="Inserisci testo">
                         <button type="submit" >invia</button>
                     </form>
                 </div>
                 <div class="list">
-                    <ul >
+                    <ul>
+                        <li v-if="listItem == 0">
+                            <p>💕 Digita qualcosa 💕</p> 
+                        </li>
                         <li v-for="(element, index) in listItem"  >
                             <p 
                                 @click="invertDone(element)" :class="{line : element.done === true } ">
