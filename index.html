@@ -8,9 +8,7 @@
         <!-- cdn font -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
         <link rel="stylesheet" href="css/style.css">
-
         <title>to do</title>
     </head>
     <body>
@@ -23,19 +21,18 @@
             </form>
             <div>
                 <ul >
-                    <li v-for="(element, index) in listItem" :class="{line : element.done === true } " >
-                     {{element.text}}<i class="fa-solid fa-xmark" @click="spliceItem(index)"></i>
+                    <li v-for="(element, index) in listItem"  >
+                        <p 
+                            @click="invertDone(element)" :class="{line : element.done === true } ">
+                            {{element.text}}
+                        </p>
+                        <i class="fa-solid fa-xmark" @click="spliceItem(index)"></i>
                     </li>
                 </ul>
             </div>
          </div>
 
-
         </div>
-        
-
-
-
        <script src="js/main.js"></script>
     </body>
 </html>
